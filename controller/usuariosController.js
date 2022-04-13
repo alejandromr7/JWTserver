@@ -78,6 +78,7 @@ const confirmar = async (req, res) => {
         //await Usuarios.update({ token: '', confirmar: true }, { where: { token } });
         usuarioConfirmar.token = '';
         usuarioConfirmar.confirmar = true;
+        usuarioConfirmar.save();
         res.json({ msg: 'Usuario confirmado correctamente', error: false });
     } catch (error) {
         console.log(error)
