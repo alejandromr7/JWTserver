@@ -1,9 +1,10 @@
 const { Router } = require('express');
 const router = Router();
-const { registrar, autenticar, confirmar, olvidePassword, comprobarToken, nuevoPassword, perfil } = require('../controller/usuariosController');
+const { registrar, autenticar, confirmar, olvidePassword, comprobarToken, nuevoPassword, perfil, prueba } = require('../controller/usuariosController');
 const chechAuth = require('../middleware/chechAuth');
 
 router.post('/', registrar);
+router.get('/', prueba);
 router.post('/login', autenticar);
 router.get('/confirmar/:token', confirmar); // Confirmar cuenta
 router.post('/olvide-password', olvidePassword); // Mandar correo via email

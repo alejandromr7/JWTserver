@@ -151,4 +151,9 @@ const perfil = async (req, res) => {
 }
 
 
-module.exports = { registrar, autenticar, confirmar, olvidePassword, comprobarToken, nuevoPassword, perfil }
+const prueba = async (req, res) => {
+    res.json('API working well');
+}
+
+
+module.exports = { registrar, autenticar, confirmar, olvidePassword, comprobarToken, nuevoPassword, perfil, prueba }
