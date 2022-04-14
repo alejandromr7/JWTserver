@@ -23,8 +23,8 @@ const checkAuth = async (req, res, next) => {
             return next();
 
         } catch (error) {
-            console.log('Session expired');
-            return res.status(400).send('Session expired');
+            console.log({ msg: 'Session expired', error: true });
+            return res.status(400).json({ msg: 'Session expired', error: true });
         }
     }
 
